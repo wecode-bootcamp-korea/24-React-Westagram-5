@@ -1,2 +1,55 @@
-.LoginJeong {
+html,
+body,
+.loginContainer {
+  height: 100%;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginInner {
+  padding: 50px;
+  border: 1px solid grey;
+  text-align: center;
+  h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+  }
+  a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  margin: 80px 0 50px 0;
+  font-size: 15px;
+  input {
+    width: 350px;
+    height: 15px;
+    margin-bottom: 10px;
+    padding: 10px 0 10px 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: #fafafa;
+    outline: none;
+  }
+  button {
+    padding: 10px 0;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    opacity: 0.5;
+    cursor: default;
+  }
 }
