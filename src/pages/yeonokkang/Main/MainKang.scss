@@ -1,2 +1,234 @@
-.MainKang {
+@mixin center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin middle {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin boxes {
+  width: 100%;
+  margin: 5px auto;
+  border: 1px solid rgb(220, 219, 219);
+  background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.entire-area {
+  @include center;
+  background-color: rgb(250, 250, 250);
+
+  main {
+    @include center;
+    width: 100%;
+    height: 100%;
+
+    .feeds {
+      @include middle;
+      padding: 5px 20px 5px 20px;
+
+      .stories {
+        @include boxes;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 23px 5px 23px;
+
+        div {
+          @include middle;
+
+          img {
+            width: 50px;
+            margin: 5px 5px;
+            border-radius: 100%;
+          }
+
+          span {
+            font-size: 13px;
+          }
+        }
+      }
+
+      article {
+        @include boxes;
+        @include middle;
+        max-width: 600px;
+
+        .uploader-header {
+          display: flex;
+          align-items: center;
+          padding: 10px 10px 10px 10px;
+          font-size: 18px;
+
+          img {
+            width: 50px;
+            margin-right: 10px;
+            border-radius: 100%;
+          }
+        }
+
+        .upload-img {
+          width: 100%;
+        }
+
+        .social-activity {
+          @include middle;
+          padding: 10px 15px;
+
+          .activity {
+            display: flex;
+            justify-content: space-between;
+
+            .far {
+              width: 25px;
+              margin-right: 8px;
+              font-size: 25px;
+            }
+          }
+
+          .liked-num {
+            margin: 15px 0 12px 0;
+            font-weight: 700;
+            font-size: 15px;
+          }
+
+          .uploader {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 10px;
+
+            img {
+              width: 30px;
+              margin-right: 7px;
+              border-radius: 100%;
+            }
+
+            .my-id {
+              margin-right: 10px;
+              font-weight: 700;
+              font-size: 15px;
+            }
+            .my-write {
+              font-size: 15px;
+              font-weight: 300;
+            }
+          }
+
+          ul {
+            @include middle;
+            justify-content: flex-start;
+            height: 120px;
+
+            li {
+              display: block;
+
+              .comments-id {
+                font-weight: 700;
+              }
+
+              span {
+                margin: 8px 10px 8px 0;
+                font-size: 15px;
+              }
+            }
+          }
+        }
+
+        .upload-time {
+          margin: 5px 0;
+          padding-left: 15px;
+          color: rgb(142, 142, 142);
+          font-size: 12px;
+        }
+
+        .add-comments {
+          display: flex;
+          align-items: center;
+          z-index: 0;
+          width: 100%;
+          padding: 25px 20px;
+          border-top: 1px solid rgb(220, 219, 219);
+
+          span {
+            margin-right: 15px;
+            font-size: 30px;
+          }
+          #comments {
+            width: 100%;
+            height: 30px;
+            border: none;
+          }
+          button {
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            color: rgb(81, 155, 240);
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .aside {
+      max-width: 200px;
+      padding: 5px 10px 5px 10px;
+
+      .user-id {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 10px 20px 10px 10px;
+
+        img {
+          width: 50px;
+          margin-right: 10px;
+          border-radius: 100%;
+        }
+
+        span {
+          margin: 40px 0;
+          font-weight: 300;
+          font-size: 17px;
+        }
+      }
+
+      .recommend-header {
+        margin: 20px auto;
+        color: rgb(143, 142, 142);
+        font-weight: 700;
+        font-size: 15px;
+      }
+
+      .follow-others {
+        .other-user {
+          display: flex;
+          align-items: center;
+          margin: 15px auto;
+
+          img {
+            width: 50px;
+            border-radius: 100%;
+          }
+
+          span {
+            margin: auto 10px;
+            font-weight: 700;
+            font-size: 15px;
+          }
+
+          button {
+            border: none;
+            background-color: transparent;
+            color: rgb(81, 155, 240);
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
 }
