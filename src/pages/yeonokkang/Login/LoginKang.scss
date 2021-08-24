@@ -48,16 +48,9 @@
           font-size: 70px;
         }
 
-        .id-wrapper {
+        .input-wrapper {
           @include wrapper;
-          .id-input {
-            @include input-style;
-          }
-        }
-
-        .pw-wrapper {
-          @include wrapper;
-          .pw-input {
+          .user-input {
             @include input-style;
           }
         }

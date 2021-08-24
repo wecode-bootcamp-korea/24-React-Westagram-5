@@ -1,4 +1,6 @@
 import React from 'react';
+import LoginBtn from './LoginBtn';
+import Input from './Input';
 
 class LoginInput extends React.Component {
   constructor(props) {
@@ -6,6 +8,7 @@ class LoginInput extends React.Component {
     this.state = {
       id: '',
       pw: '',
+      isActivate: false,
     };
   }
 
@@ -21,27 +24,36 @@ class LoginInput extends React.Component {
     });
   };
 
+  handleActivate = (id, pw) => {
+    this.setState({
+      isActivate:
+        this.state.id.includes('@') && this.state.pw.length > 3 ? true : false,
+    });
+  };
+
   render() {
     return (
       <>
-        <div className="id-wrapper">
-          <input
-            onChange={this.handleIdInput}
+        <div className="input-wrapper">
+          <Input
+            activated={this.handleActivate}
+            handleInput={this.handleIdInput}
             value={this.state.id}
-            className="id-input"
-            type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
+            type="text"
+            handleKeyup={this.handleKeyup}
           />
         </div>
-        <div className="pw-wrapper">
-          <input
-            onChange={this.handlePwInput}
+        <div className="input-wrapper">
+          <Input
+            activated={this.handleActivate}
+            handleInput={this.handlePwInput}
             value={this.state.pw}
-            className="pw-input"
             type="password"
             placeholder="비밀번호"
           />
         </div>
+        <LoginBtn isActivate={this.state.isActivate} />
       </>
     );
   }

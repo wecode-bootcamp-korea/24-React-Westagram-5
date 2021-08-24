@@ -1,7 +1,6 @@
 import React from 'react';
 import './LoginKang.scss';
-import { Link } from 'react-router-dom';
-import LoginInput from './LoginInput';
+import LoginValidation from './LoginValidation';
 
 class LoginKang extends React.Component {
   render() {
@@ -11,10 +10,7 @@ class LoginKang extends React.Component {
           <main className="login-main">
             <div className="login-wrapper">
               <div className="brand-logo">westagram</div>
-              <LoginInput />
-              <div className="sign-in">
-                <Link to="/main-kang">Login</Link>
-              </div>
+              <LoginValidation />
             </div>
             <div className="forgotPW">
               <a href="https://www.instagram.com/accounts/password/reset/">
@@ -22,6 +18,7 @@ class LoginKang extends React.Component {
               </a>
             </div>
           </main>
+
           <footer>
             <span>© 2021 Instagram from Facebook</span>
           </footer>

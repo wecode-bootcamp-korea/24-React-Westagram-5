@@ -1,10 +1,12 @@
 import React from 'react';
 import './MainKang.scss';
+import Nav from '../../../components/Nav/Nav';
 
 class MainKang extends React.Component {
   render() {
     return (
       <>
+        <Nav />
         <div className="entire-area">
           <main>
             <div className="feeds">
