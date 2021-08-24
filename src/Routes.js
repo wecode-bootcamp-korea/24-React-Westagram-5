@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Nav from './components/Nav/Nav';
 
 import LoginKeum from './pages/bobaekeum/Login/LoginKeum';
 import MainKeum from './pages/bobaekeum/Main/MainKeum';
@@ -15,7 +14,6 @@ class Routes extends React.Component {
   render() {
     return (
       <Router>
-        <Nav />
         <Switch>
           <Route exact path="/login-keum" component={LoginKeum} />
           <Route exact path="/main-keum" component={MainKeum} />
