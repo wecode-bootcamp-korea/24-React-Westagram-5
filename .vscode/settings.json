@@ -9,10 +9,9 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
-  "javascript.format.enable": false,
-  "eslint.alwaysShowStatus": true
-  "files.autoSave": "onFocusChange"
   },
-  "prettier.useEditorConfig": false
+  "javascript.format.enable": false,
+  "eslint.alwaysShowStatus": true,
+  "files.autoSave": "onFocusChange"
 }
+// "prettier.useEditorConfig": false
