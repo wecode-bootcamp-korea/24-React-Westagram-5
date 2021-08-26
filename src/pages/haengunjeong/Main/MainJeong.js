@@ -1,11 +1,12 @@
 import React from 'react';
 import './MainJeong.scss';
+import Nav from '../../../components/Nav/Nav';
 
 class MainJeong extends React.Component {
   render() {
     return (
       <>
-        <nav className="nav">
+        {/* <nav className="nav">
           <div>
             <img
               alt="instacamera"
@@ -22,7 +23,8 @@ class MainJeong extends React.Component {
             <img className="heart" src="images/haengunjeong/heart.png" />
             <img className="profile" src="images/haengunjeong/profile.png" />
           </div>
-        </nav>
+        </nav> */}
+        <Nav />
 
         <main className="mainContainer">
           <article>
