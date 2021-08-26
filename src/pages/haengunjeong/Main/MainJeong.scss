@@ -1,2 +1,59 @@
-.MainJeong {
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+}
+
+.nav .instacamera {
+  height: 30px;
+}
+
+.nav .explore,
+.heart,
+.profile {
+  height: 35px;
+  padding: 10px;
+}
+
+/* .feed {
+  border-color: 3px solid lightgrey;
+} */
+
+.profileImg,
+.likeUser {
+  border-radius: 50%;
+}
+
+.profileImg {
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
+}
+
+.feedheader p {
+  font-size: 20px;
+  font-weight: bold;
+  display: inline;
+}
+
+.feedImg {
+  height: 800px;
+  width: 800px;
+}
+
+.hearted,
+.comment {
+  height: 24px;
+}
+
+.upload {
+  height: 22px;
+}
+
+.likeUser {
+  width: 40px;
+  height: 40px;
 }
