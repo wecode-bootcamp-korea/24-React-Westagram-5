@@ -1,2 +1,74 @@
-.LoginJeong {
+* {
+  box-sizing: border-box;
+}
+
+// 폰트 이렇게?
+// body {
+//   font-family: 글씨체;
+// }
+
+html,
+body {
+  height: 100%;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 10%;
+}
+
+.loginInner {
+  padding: 50px;
+  border: 1px solid grey;
+  text-align: center;
+
+  h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  margin: 80px 0 50px 0;
+  font-size: 15px;
+
+  input {
+    width: 350px;
+    height: 36px;
+    margin-bottom: 10px;
+    padding: 10px 0 10px 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: #fafafa;
+    outline: none;
+  }
+
+  .loginBtn {
+    padding: 10px 0;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  .disabled {
+    opacity: 0.1;
+  }
 }
