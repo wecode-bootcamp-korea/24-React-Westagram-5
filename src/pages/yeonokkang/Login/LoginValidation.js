@@ -25,20 +25,22 @@ class LoginInput extends React.Component {
   };
 
   handleActivate = (id, pw) => {
-    this.setState({
-      isActivate:
-        this.state.id.includes('@') && this.state.pw.length > 3 ? true : false,
-    });
+    const idValidate = this.state.id.includes('@');
+    const pwValidate = this.state.pw.length > 3;
+
+    this.setState({ isActivate: idValidate && pwValidate });
   };
 
   render() {
+    const { id, pw, isActivate } = this.state;
+
     return (
       <>
         <div className="input-wrapper">
           <Input
             activated={this.handleActivate}
             handleInput={this.handleIdInput}
-            value={this.state.id}
+            value={id}
             placeholder="전화번호, 사용자 이름 또는 이메일"
             type="text"
             handleKeyup={this.handleKeyup}
@@ -48,12 +50,12 @@ class LoginInput extends React.Component {
           <Input
             activated={this.handleActivate}
             handleInput={this.handlePwInput}
-            value={this.state.pw}
+            value={pw}
             type="password"
             placeholder="비밀번호"
           />
         </div>
-        <LoginBtn isActivate={this.state.isActivate} />
+        <LoginBtn isActivate={isActivate} />
       </>
     );
   }

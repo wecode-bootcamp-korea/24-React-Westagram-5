@@ -2,10 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default class LoginBtn extends React.Component {
-  handleLoginBtn = () => {
-    this.setState({});
-  };
-
   render() {
     const { isActivate } = this.props;
 
