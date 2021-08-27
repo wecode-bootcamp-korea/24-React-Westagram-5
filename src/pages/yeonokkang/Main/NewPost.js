@@ -5,18 +5,12 @@ export default class NewPost extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: [
-        {
-          id: 1,
-          username: '',
-          comment: '',
-        },
-      ],
+      comments: [],
       commentInput: '',
     };
   }
 
-  setCommentsState = e => {
+  setCommentsState = () => {
     const { comments, commentInput } = this.state;
     const history = {
       id: comments.length + 1,
@@ -25,17 +19,25 @@ export default class NewPost extends Component {
     };
 
     this.setState({
-      comments: [history],
+      comments: [...comments, history],
+      commentInput: '',
     });
   };
 
-  handleAddComment = () => {
-    this.state.comments.map(e => (
-      <li>
-        <span className="comments-id">{e.username}</span>
-        <span>{e.comment}</span>
-      </li>
-    ));
+  keyUp = e => {
+    const { comments, commentInput } = this.state;
+    if (e.keyCode === 13) {
+      const history = {
+        id: comments.length + 1,
+        username: 'yeonok',
+        comment: commentInput,
+      };
+
+      this.setState({
+        comments: [...comments, history],
+        commentInput: '',
+      });
+    }
   };
 
   handleInputText = e => {
@@ -45,7 +47,8 @@ export default class NewPost extends Component {
   };
 
   render() {
-    const { commentInput } = this.state;
+    const { commentInput, comments } = this.state;
+
     return (
       <article>
         <div className="uploader-header">
@@ -77,10 +80,10 @@ export default class NewPost extends Component {
         </div>
 
         <ul>
-          {this.state.comments.map(e => (
-            <li>
-              <span className="comments-id">{e.username}</span>
-              <span>{e.comment}</span>
+          {comments.map(commentData => (
+            <li key={commentData.id}>
+              <span className="comments-id">{commentData.username}</span>
+              <span>{commentData.comment}</span>
             </li>
           ))}
         </ul>
@@ -88,9 +91,9 @@ export default class NewPost extends Component {
 
         <NewComment
           inputChanged={this.handleInputText}
-          resetInput={this.resetInput}
           putComment={commentInput}
           addComment={this.setCommentsState}
+          keyUp={this.keyUp}
         />
       </article>
     );

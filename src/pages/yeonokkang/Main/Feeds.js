@@ -9,7 +9,13 @@ export default class Feeds extends React.Component {
         <div className="feeds">
           <div className="stories">
             <Stories />
+            <Stories />
+            <Stories />
+            <Stories />
+            <Stories />
+            <Stories />
           </div>
+          <NewPost />
           <NewPost />
         </div>
       </div>

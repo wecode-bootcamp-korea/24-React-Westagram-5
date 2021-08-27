@@ -41,17 +41,5 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "prettier": "^2.3.2"
-  },
-  "nodemonConfig": {
-    "name": "nodemon",
-    "homepage": "http://nodemon.io",
-    "...": "... other standard package.json values",
-    "nodemonConfig": {
-      "ignore": [
-        "test/*",
-        "docs/*"
-      ],
-      "delay": 2500
-    }
   }
 }
