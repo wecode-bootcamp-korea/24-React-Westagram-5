@@ -1,7 +1,10 @@
+@mixin sign-in {
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+
 @mixin input-style {
   margin: 5px auto;
-  width: 90%;
-  height: 80%;
   padding: 5px 5px 5px 10px;
   border: none;
   background-color: rgb(250, 250, 250);
@@ -10,7 +13,8 @@
 
 @mixin wrapper {
   width: 100%;
-  margin: 3px auto;
+  height: 60px;
+  margin-bottom: 3px;
   padding: 10px 5px;
   border-radius: 5px;
   border: 1px solid rgb(220, 219, 219);
@@ -48,23 +52,35 @@
           font-size: 70px;
         }
 
-        .input-wrapper {
+        .user-input {
           @include wrapper;
-          .user-input {
-            @include input-style;
-          }
+          @include input-style;
         }
 
-        .sign-in {
-          padding: 20px 0px;
-          background-color: rgb(175, 202, 233);
-          border-radius: 5px;
+        .inactive {
+          @include sign-in;
+          background-color: lightblue;
 
           a {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
+            height: 40px;
+            text-decoration: none;
+            color: white;
+            font-style: bold;
+            font-size: 18px;
+          }
+        }
+
+        .active {
+          @include sign-in;
+          background-color: blue;
+
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 40px;
             text-decoration: none;
             color: white;
@@ -74,7 +90,7 @@
         }
       }
 
-      .forgotPW {
+      .forgot-pw {
         display: flex;
         justify-content: center;
         margin: 40px 0 20px 0;

@@ -8,7 +8,7 @@ export default class NewComment extends Component {
         <div className="add-comments">
           <span>😊</span>
           <input
-            className="commentInput"
+            className="comment-input"
             onKeyUp={keyUp}
             onChange={inputChanged}
             type="text"

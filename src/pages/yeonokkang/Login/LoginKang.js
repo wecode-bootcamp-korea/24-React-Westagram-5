@@ -1,6 +1,6 @@
 import React from 'react';
 import './LoginKang.scss';
-import LoginValidation from './LoginValidation';
+import LoginValidation from './components/LoginValidation';
 
 class LoginKang extends React.Component {
   render() {
@@ -12,7 +12,7 @@ class LoginKang extends React.Component {
               <div className="brand-logo">westagram</div>
               <LoginValidation />
             </div>
-            <div className="forgotPW">
+            <div className="forgot-pw">
               <a href="https://www.instagram.com/accounts/password/reset/">
                 비밀번호를 잊으셨나요?
               </a>

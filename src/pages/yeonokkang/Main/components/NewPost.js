@@ -47,6 +47,7 @@ export default class NewPost extends Component {
   };
 
   render() {
+    const { handleInputText, setCommentsState, keyUp } = this;
     const { commentInput, comments } = this.state;
 
     return (
@@ -66,12 +67,12 @@ export default class NewPost extends Component {
         />
         <div className="activity">
           <div>
-            <i className="far fa-heart"></i>
-            <i className="far fa-comment"></i>
-            <i className="far fa-paper-plane"></i>
+            <i className="far fa-heart" />
+            <i className="far fa-comment" />
+            <i className="far fa-paper-plane" />
           </div>
 
-          <i className="far fa-bookmark"></i>
+          <i className="far fa-bookmark" />
         </div>
         <div className="liked-num">89 likes</div>
         <div className="uploader-comment">
@@ -80,20 +81,20 @@ export default class NewPost extends Component {
         </div>
 
         <ul>
-          {comments.map(commentData => (
-            <li key={commentData.id}>
-              <span className="comments-id">{commentData.username}</span>
-              <span>{commentData.comment}</span>
+          {comments.map(({ id, username, comment }) => (
+            <li key={id}>
+              <span className="comments-id">{username}</span>
+              <span>{comment}</span>
             </li>
           ))}
         </ul>
         <div className="upload-time">28 minutes ago </div>
 
         <NewComment
-          inputChanged={this.handleInputText}
+          inputChanged={handleInputText}
           putComment={commentInput}
-          addComment={this.setCommentsState}
-          keyUp={this.keyUp}
+          addComment={setCommentsState}
+          keyUp={keyUp}
         />
       </article>
     );

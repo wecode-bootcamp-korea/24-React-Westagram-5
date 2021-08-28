@@ -7,6 +7,7 @@ export default class Input extends React.Component {
       <input
         onKeyUp={activated}
         onChange={handleInput}
+        name={type === 'text' ? 'id' : 'pw'}
         value={value}
         className="user-input"
         type={type}

@@ -6,14 +6,7 @@ export default class LoginBtn extends React.Component {
     const { isActivate } = this.props;
 
     return (
-      <div
-        className="sign-in"
-        style={
-          isActivate
-            ? { backgroundColor: 'blue' }
-            : { backgroundColor: 'lightblue' }
-        }
-      >
+      <div className={isActivate ? 'active' : 'inactive'}>
         <Link to={isActivate ? '/main-kang' : '#'}>Login</Link>
       </div>
     );
