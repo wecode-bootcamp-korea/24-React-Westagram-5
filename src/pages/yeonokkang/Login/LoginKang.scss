@@ -1,2 +1,113 @@
-.LoginKang {
+@mixin sign-in {
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+
+@mixin input-style {
+  margin: 5px auto;
+  padding: 5px 5px 5px 10px;
+  border: none;
+  background-color: rgb(250, 250, 250);
+  font-size: 16px;
+}
+
+@mixin wrapper {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 3px;
+  padding: 10px 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(220, 219, 219);
+  background-color: rgb(250, 250, 250);
+}
+
+.whole-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  section {
+    position: relative;
+    margin: 10px auto;
+    border-style: 1px solid rgb (219, 219, 219);
+
+    .login-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 500px;
+      padding: 10px 40px 15px 40px;
+      border: 1px solid rgb(219, 219, 219);
+      background-color: white;
+
+      .login-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .brand-logo {
+          display: flex;
+          justify-content: center;
+          margin: 30px auto;
+          font-family: 'Lobster', cursive;
+          font-size: 70px;
+        }
+
+        .user-input {
+          @include wrapper;
+          @include input-style;
+        }
+
+        .inactive {
+          @include sign-in;
+          background-color: lightblue;
+
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            text-decoration: none;
+            color: white;
+            font-style: bold;
+            font-size: 18px;
+          }
+        }
+
+        .active {
+          @include sign-in;
+          background-color: blue;
+
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            text-decoration: none;
+            color: white;
+            font-style: bold;
+            font-size: 18px;
+          }
+        }
+      }
+
+      .forgot-pw {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0 20px 0;
+
+        a {
+          text-decoration: none;
+          font-size: 10px;
+        }
+      }
+    }
+
+    footer {
+      position: absolute;
+      right: 5%;
+      margin: 17px auto;
+      color: rgb(142, 142, 142);
+      font-size: small;
+    }
+  }
 }

@@ -13,11 +13,12 @@ class Nav extends React.Component {
             <i className="fas fa-search">&nbsp;검색</i>
             <input id="search-bar" type="text" />
           </div>
+
           <div className="nav-right">
-            <i className="far fa-paper-plane"></i>
-            <i className="far fa-heart"></i>
-            <i className="far fa-compass"></i>
-            <i className="far fa-user-circle"></i>
+            <i className="far fa-paper-plane" />
+            <i className="far fa-heart" />
+            <i className="far fa-compass" />
+            <i className="far fa-user-circle" />
           </div>
         </div>
       </div>
